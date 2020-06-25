@@ -1,5 +1,4 @@
 import idb from "idb"
-import pages from './pages.js'
 
 class database{
     static connection(){

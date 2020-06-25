@@ -8,7 +8,7 @@ import mainView from "./script/view/main.js"
 document.addEventListener("DOMContentLoaded", mainView)
 
 if ('serviceWorker' in navigator) {
-    const registration = runtime.register();
+    const registration = runtime.register()
 }
 
 if ('Notification' in window){
@@ -27,28 +27,28 @@ if ('PushManager' in window) {
     navigator.serviceWorker.getRegistration().then(function(registration) {
         registration.pushManager.subscribe({
             userVisibleOnly: true,
-            applicationServerKey: urlBase64ToUint8Array("BKpW5Ia830eAsmaouFpIiWG2eBUwZI2oXOE4OjMLC7nT8hRtnrQd3X1LF1jaumvgBLrPbP_IPcFBZfT6sL7coYw")
-        }).then(function(subscribe) {
-            console.log('Berhasil melakukan subscribe dengan endpoint: ', subscribe.endpoint);
-            console.log('Berhasil melakukan subscribe dengan p256dh key: ', btoa(String.fromCharCode.apply(
-                null, new Uint8Array(subscribe.getKey('p256dh')))));
-            console.log('Berhasil melakukan subscribe dengan auth key: ', btoa(String.fromCharCode.apply(
-                null, new Uint8Array(subscribe.getKey('auth')))));
+            applicationServerKey: urlBase64ToUint8Array("BM5PQQiuv563IfG-8Xqxi34wMkFT184wtt9XqZF4k8B_4K_HJ3oWPfODgKrhU0uJ_neMZXE4lajmi-7AUuolZ80")
+        }).then(function(subscribe){
+            console.log('Berhasil melakukan subscribe dengan endpoint: ', subscribe.endpoint)
+
+            console.log('Berhasil melakukan subscribe dengan p256dh key: ', btoa(String.fromCharCode.apply(null, new Uint8Array(subscribe.getKey('p256dh')))))
+
+            console.log('Berhasil melakukan subscribe dengan auth key: ', btoa(String.fromCharCode.apply(null, new Uint8Array(subscribe.getKey('auth')))))
         }).catch(function(e) {
-            console.error('Tidak dapat melakukan subscribe ', e.message);
-        });
-    });
+            console.error('Tidak dapat melakukan subscribe ', e.message)
+        })
+    })
 }
 
 function urlBase64ToUint8Array(base64String) {
-    const padding = '='.repeat((4 - base64String.length % 4) % 4);
+    const padding = '='.repeat((4 - base64String.length % 4) % 4)
     const base64 = (base64String + padding)
         .replace(/-/g, '+')
-        .replace(/_/g, '/');
-    const rawData = window.atob(base64);
-    const outputArray = new Uint8Array(rawData.length);
+        .replace(/_/g, '/')
+    const rawData = window.atob(base64)
+    const outputArray = new Uint8Array(rawData.length)
     for (let i = 0; i < rawData.length; ++i) {
-        outputArray[i] = rawData.charCodeAt(i);
+        outputArray[i] = rawData.charCodeAt(i)
     }
-    return outputArray;
+    return outputArray
 }

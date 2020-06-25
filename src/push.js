@@ -1,20 +1,20 @@
 const webPush = require("web-push");
 
 const vapidKeys = {
-    publicKey : "BKpW5Ia830eAsmaouFpIiWG2eBUwZI2oXOE4OjMLC7nT8hRtnrQd3X1LF1jaumvgBLrPbP_IPcFBZfT6sL7coYw",
-    privateKey : "j8R4-WgHqmC0UIBV-IBGKkSndXQ3fS7LV8FIWD8nFmA"
+    publicKey : "BM5PQQiuv563IfG-8Xqxi34wMkFT184wtt9XqZF4k8B_4K_HJ3oWPfODgKrhU0uJ_neMZXE4lajmi-7AUuolZ80",
+    privateKey : "6DLDaaJC-bgGMWbsZ5R6dn8keuWtYXnKLquYBR63RVI"
 }
 
 const subscription = {
-    endpoint : "https://fcm.googleapis.com/fcm/send/cHBdp4LTcdM:APA91bEn3EcVgmYYTKRzhuzG7blGCR7W14KNQ_0fGXsiuSwNomVz6NYW-TIstQDWVDhAVM7Q3QLuGhGnN1T8MohRet6VmYWZc-bKlcAJciy_4ea7rHy1zMGyXY2LRI-7vvd65JM_UCwQ",
+    endpoint : "https://fcm.googleapis.com/fcm/send/ed_NPR0InGg:APA91bEIEDOtzYveR9MLrnTTVwzqh_pTj8oNp0vagk5mDcerVTdvgJOVlL89JYzx9YdjJ3phTD_TnkpNM4ngVYLM0GWMTL8iBOMKToT1kJDwXiieXMhEUSoEwhQn-psBoDO5nfS9QYI8",
     keys : {
-        p256dh : "BDzqqCUNL7ICRrVsMotFELvyi7QWb+CA6+Y9Bbn9AoORslz6RZXpaObcwZFoM9B01Vf69RPlBE/lFLcvPUTfVxw=",
-        auth : "XuUSQvkCGA7WpPM5aJeTKA=="
+        p256dh : "BLoG8UWgPKXHgkFl+/tCeO8mdaPHhaiVRDPcOwbAN4JfcykM9WUr93NhP6g8wGdvEN9xnEgBsFn4TS3l1hunAGE=",
+        auth : "u2uPWWnEFACMBvsuGOTQxg=="
     }
 }
 
 const options = {
-    gcmAPIKey : "397944144052",
+    gcmAPIKey : "605055428101",
     TTL : 60
 }
 

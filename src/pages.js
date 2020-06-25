@@ -1,6 +1,6 @@
 class pages{
     static loadPage(page){
-        return fetch(`src/pages/${page}.html`)
+        return fetch(`${page}.html`)
         .then(response => response.text())
     }
 
