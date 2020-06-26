@@ -1,0 +1,2 @@
+Firebase Hosting : https://quarantineny-league.web.app/
+Github Pages     : https://github.com/fauzanmaulana/fauzanmaulana.github.io

@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #A3BFF9;
+}
+
+#landing-image, #landing-info{
+    height: 100vh;
+}
+
+.info-title{
+    width: 100%;
+}
+
+.info-desc{
+    width: 70%;
+    margin: auto;
+}
+
+.nav-info{
+    display:flex;
+    justify-content: space-between;
+    margin: 20px 20px 0 20px;
+}
+
+#liked-league{
+    color: #fff;
+}
+
+#liked-league:hover{
+    color: #ffd9da;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+competition-item:hover{
+    cursor: pointer;
+}
